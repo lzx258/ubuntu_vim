@@ -112,6 +112,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH=/usr/local/cuda-7.5/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-7.5/targets/x86_64-linux/lib:/home/libs/facesdk_gpu/face_sdk_5.2.0/lib:/home/lzx/develop/video_adpter/support/lib:/home/lzx/develop/video_adpter/release/lib:$LD_LIBRARY_PATH
 ulimit -c unlimited
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$HOME/projects/st_face_gpu/lib:$HOME/SenseFace-GPU/senseface_gpu/third/video_adpter/support/lib:$HOME/SenseFace-GPU/senseface_gpu/third/video_adpter/release/lib:$HOME/SenseFace-GPU/senseface_gpu/third/ST-stream-media/release/lib:$HOME/SenseFace-GPU/senseface_gpu/third/npnet:/usr/local/x264/lib:$LD_LIBRARY_PATH
