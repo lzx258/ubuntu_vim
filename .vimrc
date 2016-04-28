@@ -9,6 +9,9 @@ filetype plugin indent on
 " enable syntax hightlight and completion
 syntax on
 
+if exists('$TMUX')
+    set term=screen-256color
+endif
 "--------
 " Vim UI
 "--------

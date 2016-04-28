@@ -14,7 +14,7 @@ syntax on
 "--------
 " color scheme
 set background=dark
-color Tomorrow-Night-Bright
+color solarized
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
@@ -215,8 +215,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" map <ESC> to jj
-inoremap jj <ESC>
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
       \ if ! exists("g:leave_my_cursor_position_alone") |

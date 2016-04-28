@@ -13,7 +13,7 @@ Bundle 'gmarik/vundle'
 "------------------
 Bundle 'Shougo/neocomplcache'
 Bundle 'mattn/emmet-vim'
-Bundle 'Raimondi/delimitMate'
+"Bundle 'Raimondi/delimitMate'
 Bundle 'ervandew/supertab'
 " snippets
 Bundle 'garbas/vim-snipmate'
@@ -38,12 +38,16 @@ Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
 
 "--------------
+" IDE easy grep
+"--------------
+Bundle 'dkprice/vim-easygrep'
+
+"--------------
 " IDE features
 "--------------
 Bundle 'scrooloose/nerdtree'
 Bundle 'humiaozuzu/TabBar'
 Bundle 'majutsushi/tagbar'
-Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
@@ -102,5 +106,4 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'fisadev/fisa-vim-colorscheme'
 
-Bundle 'drmikehenry/vim-headerguard.git'
 filetype plugin indent on     " required!

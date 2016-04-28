@@ -12,6 +12,7 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
+set -o vi
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -79,15 +80,17 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    alias grep='grep --color=auto '
+    alias fgrep='fgrep --color=auto '
+    alias egrep='egrep --color=auto '
 fi
 
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias df='df -h'
+alias h='history'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -114,4 +117,4 @@ if ! shopt -oq posix; then
 fi
 ulimit -c unlimited
 export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$HOME/projects/st_face_gpu/lib:$HOME/SenseFace-GPU/senseface_gpu/third/video_adpter/support/lib:$HOME/SenseFace-GPU/senseface_gpu/third/video_adpter/release/lib:$HOME/SenseFace-GPU/senseface_gpu/third/ST-stream-media/release/lib:$HOME/SenseFace-GPU/senseface_gpu/third/npnet:/usr/local/x264/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH

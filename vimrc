@@ -275,7 +275,7 @@ endif
 map <F7> :call TitleDet()<cr>'s
 function AddTitle()
    call append(0,"/*=============================================================================")
-    call append(1,"# Copyright (c) 2015 sensetime.com, Inc. All Rights Reserved")
+    call append(1,"# Copyright (c) 2016 sensetime.com, Inc. All Rights Reserved")
     call append(2,"# Author: liuzuxi - liuzxui@sensetime.com")
     call append(3,"#")
     call append(4,"# Last modified: ".strftime("%Y-%m-%d %H:%M"))
