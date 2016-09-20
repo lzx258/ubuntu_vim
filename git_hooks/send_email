@@ -23,7 +23,10 @@ password = 'sensetime1234'
 
 #邮件标题和内容
 subject  = u'[Notice]sense engine update git notify'
-body     = u'hello all:\n please update soft! \ngit address:git@gitlab.sz.sensetime.com:chendanting/dynammic-server.git'
+f=open('changelog.md')
+changelog=f.read()
+body     = u'hello all:\n please update soft! \ngit address:git@gitlab.sz.sensetime.com:chendanting/dynammic-server.git\n\n\n\nchangelog:\n' + changelog 
+f.close()
 
 #初始化邮件
 encoding = 'utf-8'
@@ -57,6 +60,6 @@ try:
     #发送邮件
     smtp.sendmail(fromMail,toMail,mail.as_string())
     smtp.close()
-    print 'OK'
+    print 'send email to ' + ','.join(toMail) + ' ok'
 except Exception as e:
     print e
