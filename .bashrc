@@ -12,7 +12,6 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
-set -o vi
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -91,6 +90,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias df='df -h'
 alias h='history'
+alias rsyncw='rsync -auvW --exclude=.*'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
