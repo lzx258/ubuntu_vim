@@ -5,6 +5,7 @@ from email.MIMEText import MIMEText
 from email.Utils import formatdate
 from email.Header import Header
 import sys
+import os
 
 #设置默认字符集为UTF8 不然有些时候转码会出问题
 default_encoding = 'utf-8'
@@ -17,15 +18,20 @@ smtpHost = 'smtp.126.com'
 smtpPort = '25'
 sslPort  = '587'
 fromMail = 'sensetime@126.com'
-toMail   =  ["wenzuqin@sensetime.com"]
+toMail   =  ["chendanting@sensetime.com","wenzuqin@sensetime.com","wangjing@sensetime.com","caolin@sensetime.com","yiyuan@sensetime.com"]
+#toMail   =  ["liuzuxi@sensetime.com"]
 username = 'sensetime@126.com'
 password = 'sensetime1234'
 
+branch_name = os.popen('git symbolic-ref --short -q HEAD')
+branch=branch_name.read()
+print "branch:%s" %branch
+branch_name.close()
 #邮件标题和内容
-subject  = u'[Notice]sense engine update git notify'
+subject  = "[Notice]sense engine: please update git branch:%s" %branch
 f=open('changelog.md')
 changelog=f.read()
-body     = u'hello all:\n please update soft! \ngit address:git@gitlab.sz.sensetime.com:chendanting/dynammic-server.git\n\n\n\nchangelog:\n' + changelog 
+body="Hi all:\n Please update git branch:%s \ngit address: http://gitlab.sz.sensetime.com/chendanting/dynammic-server.git/tree/%s\n\n\n\n" %(branch,branch) + changelog
 f.close()
 
 #初始化邮件
@@ -53,7 +59,6 @@ try:
 
     #纯粹的ssl加密方式，通信过程加密，邮件数据安全
     smtp = smtplib.SMTP_SSL(smtpHost,sslPort)
-    #smtp.login(username,
     smtp.ehlo()
     smtp.login(username,password)
 
