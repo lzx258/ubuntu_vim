@@ -17,7 +17,7 @@ endif
 "--------
 " color scheme
 set background=dark
-color Tomorrow-Night-Bright
+color darkblue
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
