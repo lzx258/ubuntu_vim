@@ -18,7 +18,7 @@ smtpHost = 'smtp.126.com'
 smtpPort = '25'
 sslPort  = '587'
 fromMail = 'sensetime@126.com'
-toMail   =  ["chendanting@sensetime.com","wenzuqin@sensetime.com","wangjing@sensetime.com","caolin@sensetime.com","yiyuan@sensetime.com"]
+toMail   =  ["chendanting@sensetime.com","liqinglin@sensetime.com","wenzuqin@sensetime.com","wangjing@sensetime.com","caolin@sensetime.com","yiyuan@sensetime.com"]
 #toMail   =  ["liuzuxi@sensetime.com"]
 username = 'sensetime@126.com'
 password = 'sensetime1234'
@@ -31,7 +31,7 @@ branch_name.close()
 subject  = "[Notice]sense engine: please update git branch:%s" %branch
 f=open('changelog.md')
 changelog=f.read()
-body="Hi all:\n Please update git branch:%s \ngit address: http://gitlab.sz.sensetime.com/chendanting/dynammic-server.git/tree/%s\n\n\n\n" %(branch,branch) + changelog
+body="Hi all:\n Please update git branch:%s \ngit address: http://gitlab.sz.sensetime.com/chendanting/dynammic-server/tree/%s\n\n\n\n" %(branch,branch) + changelog
 f.close()
 
 #初始化邮件
