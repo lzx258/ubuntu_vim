@@ -91,6 +91,7 @@ alias l='ls -CF'
 alias df='df -h'
 alias h='history'
 alias rsyncw='rsync -auvW --exclude=.*'
+alias cscopew='cscope -Rbkq'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
